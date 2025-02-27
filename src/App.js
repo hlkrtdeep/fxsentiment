@@ -23,7 +23,7 @@ function App() {
         event.preventDefault();
         const currencyPairsList = currencyPairs.split(',').map(pair => pair.trim().toUpperCase());
 
-        axios.post('http://localhost:5000/analyze', { currency_pairs: currencyPairsList })
+        axios.post(`${api_url}/analyze`, { currency_pairs: currencyPairsList })
             .then(response => {
                 setResults(response.data);
                 setCurrencyPairs('');
