@@ -11,7 +11,7 @@ function App() {
     useEffect(() => {
         axios.get(`${api_url}/news`)
             .then(response => {
-                //console.log('News data:', response.data); // Debugging log
+                console.log('News data:', response.data); // Debugging log
                 setNews(response.data);
             })
             .catch(error => {
@@ -55,7 +55,7 @@ function App() {
                     </form>
                     <h2>Results:</h2>
                     <ul>
-                        {results.map((result, index) => (
+                        {Array.isArray(results) && results.map((result, index) => (
                             <li key={index}>
                                 {result.currency_pair}: The sentiment for the upcoming days is likely {result.sentiment} (Total Sentiment Score: {result.total_sentiment})
                             </li>
@@ -65,7 +65,7 @@ function App() {
                 <div className='column'>
                     <h3>News Feed</h3>
                     <ul>
-                        {news.map((article, index) => (
+                        {Array.isArray(news) && news.map((article, index) => (
                             <li key={index}>
                                 <a href={article.Link} target="_blank" rel="noopener noreferrer">{article.ID}. {article.Heading}</a>
                             </li>
