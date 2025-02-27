@@ -55,7 +55,7 @@ function App() {
                         </label>
                         <button type="submit">Analyze</button>
                     </form>
-                    <h3>Results</h3>
+                    <h3>Analysis Result</h3>
                     <ul>
                         {Array.isArray(results) && results.map((result, index) => (
                             <li key={index}>
