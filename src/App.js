@@ -6,12 +6,14 @@ function App() {
     const [currencyPairs, setCurrencyPairs] = useState('');
     const [results, setResults] = useState([]);
     const [news, setNews] = useState([]);
-    const api_url = 'https://7b7d-103-51-22-137.ngrok-free.app'
+    const api_url = 'https://7b7d-103-51-22-137.ngrok-free.app'; // Your Ngrok URL
 
     useEffect(() => {
         axios.get(`${api_url}/news`)
             .then(response => {
                 console.log('News data:', response.data); // Debugging log
+                console.log('News data type:', typeof response.data);
+                console.log('Is array:', Array.isArray(response.data));
                 setNews(response.data);
             })
             .catch(error => {
@@ -64,13 +66,17 @@ function App() {
                 </div>
                 <div className='column'>
                     <h3>News Feed</h3>
-                    <ul>
-                        {Array.isArray(news) && news.map((article, index) => (
-                            <li key={index}>
-                                <a href={article.Link} target="_blank" rel="noopener noreferrer">{article.ID}. {article.Heading}</a>
-                            </li>
-                        ))}
-                    </ul>
+                    {Array.isArray(news) ? (
+                        <ul>
+                            {news.map((article, index) => (
+                                <li key={index}>
+                                    <a href={article.Link} target="_blank" rel="noopener noreferrer">{article.ID}. {article.Heading}</a>
+                                </li>
+                            ))}
+                        </ul>
+                    ) : (
+                        <p>No news available or data is not in the correct format.</p>
+                    )}
                 </div>
             </div>
         </div>
