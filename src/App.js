@@ -6,9 +6,10 @@ function App() {
     const [currencyPairs, setCurrencyPairs] = useState('');
     const [results, setResults] = useState([]);
     const [news, setNews] = useState([]);
+    const api_url = 'https://7b7d-103-51-22-137.ngrok-free.app'
 
     useEffect(() => {
-        axios.get('http://localhost:5000/news')
+        axios.get(`${api_url}/news`)
             .then(response => {
                 //console.log('News data:', response.data); // Debugging log
                 setNews(response.data);
