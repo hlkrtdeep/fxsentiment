@@ -6,7 +6,7 @@ function App() {
     const [currencyPairs, setCurrencyPairs] = useState('');
     const [results, setResults] = useState([]);
     const [news, setNews] = useState([]);
-    const api_url = 'https://7b7d-103-51-22-137.ngrok-free.app'; // Your Ngrok URL
+    const api_url = ' https://59c8-103-51-22-137.ngrok-free.app'; // Your Ngrok URL
 
     useEffect(() => {
         axios.get(`${api_url}/news`)
