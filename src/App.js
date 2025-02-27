@@ -6,7 +6,7 @@ function App() {
     const [currencyPairs, setCurrencyPairs] = useState('');
     const [results, setResults] = useState([]);
     const [news, setNews] = useState([]);
-    const api_url = 'https://7cae-103-51-22-137.ngrok-free.app'; // Your Ngrok URL
+    const api_url = 'https://0497-103-51-22-137.ngrok-free.app'; // Your Ngrok URL
 
     useEffect(() => {
         axios.get(`${api_url}/news`)
@@ -55,7 +55,7 @@ function App() {
                         </label>
                         <button type="submit">Analyze</button>
                     </form>
-                    <h3>Analysis Result</h3>
+                    <h3>Analysis Results</h3>
                     <ul>
                         {Array.isArray(results) && results.map((result, index) => (
                             <li key={index}>
