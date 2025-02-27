@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/fxsentiment/static/css/main.ba407c8d.css",
-    "main.js": "/fxsentiment/static/js/main.4b60226e.js",
+    "main.js": "/fxsentiment/static/js/main.2c128437.js",
     "static/js/453.b55eac32.chunk.js": "/fxsentiment/static/js/453.b55eac32.chunk.js",
     "index.html": "/fxsentiment/index.html",
     "main.ba407c8d.css.map": "/fxsentiment/static/css/main.ba407c8d.css.map",
-    "main.4b60226e.js.map": "/fxsentiment/static/js/main.4b60226e.js.map",
+    "main.2c128437.js.map": "/fxsentiment/static/js/main.2c128437.js.map",
     "453.b55eac32.chunk.js.map": "/fxsentiment/static/js/453.b55eac32.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ba407c8d.css",
-    "static/js/main.4b60226e.js"
+    "static/js/main.2c128437.js"
   ]
 }
